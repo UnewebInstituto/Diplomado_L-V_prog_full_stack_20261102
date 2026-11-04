@@ -1,0 +1,21 @@
+  img{
+                width: 200px;
+                height: 200px;
+                
+}
+
+table{
+        width: 70%; 
+        margin-left : 15%;
+        border-style : solid;
+        border-width: 1px;
+        border-color: gray;
+
+}
+
+table,th,td{ 
+        border-style : solid;
+        border-width: 1px;
+        border-color: gray;
+    
+}

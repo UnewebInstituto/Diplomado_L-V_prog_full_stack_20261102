@@ -1,0 +1,30 @@
+https://elcodigoascii.com.ar/
+
+(1) Atributos de conexión a www.alwaysdata.net
+SERVIDOR FTP host: 
+ftp-hduque-test.alwaysdata.net
+
+USUARIO Name:
+hduque-test
+
+PUERTO FTP: 21
+
+Configuración (Settings: Rueda de engranage)
+https://filezilla-project.org/
+
+(2) Se requiere de la instalación de Filezilla.
+
+
+
+Rutas en alwaysdata
+
+https://hduque-test.alwaysdata.net
+https://samuelregardiz.alwaysdata.net
+https://arnaldocamacho.alwaysdata.net
+https://erickmatos.alwaysdata.net
+
+https://hduque-test.alwaysdata.net/html5_nivel1/ej01_estructura.html
+
+https://samuelregardiz.alwaysdata.net/html5_nivel1/ej01-estructura.html
+https://arnaldocamacho.alwaysdata.net/html5_nivel1/ej01-estructura.html
+https://erickmatos.alwaysdata.net/html5_nivel1/ej01-estructura.html
