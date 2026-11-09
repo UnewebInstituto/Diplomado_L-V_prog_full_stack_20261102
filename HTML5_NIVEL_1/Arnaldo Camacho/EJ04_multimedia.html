@@ -3,25 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link rel="stylesheet" href="../Arnaldo Camacho/CSS/ej04_multimedia.css">
 
     <title>ejemplo 04 </title>
 </head>
 
 <body>
     <h1>Etiquetas Multimedia</h1>
-    <h2>video</h2>
-    <video src="../video/" controls>Su navegador web, no soporta la etiqueta de video</video>
-
+    <h2>Video de un solo archivo de Origen</h2>
+    
+    <video src="../video/152174-802335605_medium.mp4" controls>Su navegador web, no soporta la etiqueta de video
+        <track kind="subtitles" 
+        srclang="es" 
+        label="español" 
+        src="./track/pista1.vtt">Su navegador web, no soporta la etiqueta track</track>
+         <track kind="subtitles" 
+        srclang="en" 
+        label="Ingles" 
+        src="./track/pista2.vtt">Su navegador web, no soporta la etiqueta track</track>
+          <track kind="subtitles" 
+        srclang="de" 
+        label="aleman" 
+        src="./track/pista3.vtt">Su navegador web, no soporta la etiqueta track</track>
+    </video>
+    
+  <hr>  
 <!--2do caso , uso etiqueta de video -->
+<h2>Video de multiples archivo de Origen</h2>
 
 <video  controls>
-    <source src="../video/" type="video/mp4">
-    <source src="../video/" type="video/webm">
-    <source src="../video/" type="video/ogg">
-
+    <source src="../video/152174-802335605_medium.mp4" type="video/mp4">
+    <source src="../video/152174-802335605_medium.webm" type="video/webm">
+    <source src="../video/152174-802335605_medium.ogg" type="video/ogg">
+     <track kind="subtitles" 
+        srclang="es" 
+        label="español" 
+        src="./track/pista1.vtt">Su navegador web, no soporta la etiqueta track</track>
+         <track kind="subtitles" 
+        srclang="en" 
+        label="Ingles" 
+        src="./track/pista2.vtt">Su navegador web, no soporta la etiqueta track</track>
+          <track kind="subtitles" 
+        srclang="de" 
+        label="aleman" 
+        src="./track/pista3.vtt">Su navegador web, no soporta la etiqueta track</track>
 </video>
 
+
+<hr>
+<h2>AUDIO DE UN SOLO ARCHIVO DE ORIGEN</h2>
+
+<audio src="../audio/hot_dope-epic-4-625768.mp3 " controls>Su navegador web no soporta la etiqueta Audio
+
+<track kind="subtitles" 
+        srclang="es" 
+        label="español" 
+        src="./track/pista1.vtt">Su navegador web, no soporta la etiqueta audio</track>
+         <track kind="subtitles" 
+        srclang="en" 
+        label="Ingles" 
+        src="./track/pista2.vtt">Su navegador web, no soporta la etiqueta audio</track>
+          <track kind="subtitles" 
+        srclang="de" 
+        label="aleman" 
+        src="./track/pista3.vtt">Su navegador web, no soporta la etiqueta audio</track>
+   
+</audio>
+
+<hr>
+<h2>Audio de multiples archivos de origen</h2>
+<audio controls>
+    <source src="../audio/hot_dope-epic-4-625768.mp3" type="audio/mp3">
+    <source src="../audio/hot_dope-epic-4-625768.ogg" type="audio/ogg">
+    <source src="../audio/hot_dope-epic-4-625768.wav" type="audio/wav">
+
+
+
+
+</audio>
 
 
 

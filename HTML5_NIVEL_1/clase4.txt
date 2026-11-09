@@ -1,0 +1,12 @@
+https://es.wikipedia.org/wiki/Erupci%C3%B3n_volc%C3%A1nica
+
+
+https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API
+
+https://developer.mozilla.org/es/docs/Glossary/WebVTT
+
+
+Desde el menú de Visual Studio Code, 
+
+Desde tu carpeta: Botón derecho del Mouse.
+seleccionas "Open in integrated Terminal"

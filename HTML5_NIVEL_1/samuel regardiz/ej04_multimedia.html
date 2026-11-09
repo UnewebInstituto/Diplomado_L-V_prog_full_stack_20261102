@@ -5,18 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/uneweb.ico" type="image/x-icon">
     <title>ejemplo04</title>
+    <link rel="stylesheet" href="./css/ej04_multimedia.css">
+
 </head>
 <body>
     <h1>etiquetas multimedia</h1>
-    <h2>video</h2>
-    <video src="../video/" controls>su navegador web no soporta la etiqueta video</video>
+    <h2>video de un solo archivo de origen</h2>
+    <video src="../video//152174-802335605_medium.mp4" 
+    controls>su navegador web no soporta la etiqueta video
+    <track kind="subtitles"
+               srclang="es"
+               label="español"
+               src="./track/pista1.vtt">Su navegador web, no soporta la etiqueta track</track>
+            <track kind="subtitles"
+               srclang="ing"
+               label="ingles"
+               src="./track/pista1.vtt">Su navegador web, no soporta la etiqueta track</track>
+    </video>
+    <hr>
+    <h2>video de un solo archivo de origen</h2>
     <video controls>
-        <source src="../video/" type="video/mp4">
-        <source src="../video/" type="video/mp4">
-        <source src="../video/" type="video/mp4">
+        <source src="../video/152174-802335605_medium.mp4" type="video/mp4">
+        <source src="../video/152174-802335605_medium.mp4" type="video/mp4">
+        <source src="../video/152174-802335605_medium.mp4" type="video/mp4">
+            <track kind="subtitles"
+               srclang="es"
+               label="español"
+               src="./track/pista1.vtt">Su navegador web, no soporta la etiqueta track</track>
+            <track kind="subtitles"
+               srclang="ing"
+               label="ingles"
+               src="./track/pista1.vtt">Su navegador web, no soporta la etiqueta track</track>
+        su navegador web no soporta video
 
     </video>
-   
+   <hr>
+   <h2>"audio de un solo archivo de origen"</h2>
+    <audio src="../audio/hot_dope-epic-4-625768.mp3" controls></audio> navegador actual no permite audio></audio>
+       <track kind="subtitles"
+               srclang="es"
+               label="Español"
+               src="./track/pIsta1.vtt"></track>
+        <track kind="subtitles"
+               srclang="en"
+               label="Ingles"
+               src="../samuel regardiz/track/pista2.vtt"></track>
+     </audio>
+     <hr>
+        <h2>audios de multiples archivos de origen</h2>
+        <source src="../audio/hot_dope-epic-4-625768.mp3"type="audio/mp3">       
+       <source src="../audio/hot_dope-epic-4-625768.ogg" type="audio/ogg">       
+       <source src="../audio/hot_dope-epic-4-625768.wav" type="audio/wav">   
 
 </body>
 </html>
