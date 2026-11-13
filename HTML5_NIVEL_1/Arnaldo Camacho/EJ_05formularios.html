@@ -3,29 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-<link rel="shortcut icon" href="../img/uneweb.ico" type="image/x-icon">
+    <title>Formularios</title>
+<link rel="shortcut icon" href="./uneweb.ico" type="image/x-icon">
+
 
 </head>
 <body>
     <H1>Formularios EJ05</H1>
     
-    <form action="./php/EJ_05formularios.php" method="get">
+    <form action="./php/EJ_05formularios.php" method="get" enctype="multipart/form-data">
+
+        
     <table>
+        <tr>
+            <td>Nombre:</td>
+            <td>
+                <input type="text" name="nombre" id="required">
+            </td>
+        </tr>
+        <tr>
+            <td>Edad</td>
+            <td>
+                <input type="number" name="edad"  id="" min="0" max="120" required>
+            </td>
+        <tr>
+            <td>Estatura</td>
+            <td>
+                <input type="number" name="Estatura" id="" min="0" step="0.01" required>
+            </td>
+        </tr>
+        <tr>
+            <td>Fecha de nacimiento</td>
+            <td>
+                <input type="date" name="fechanac" id="" required>
+            </td>
+        </tr>
+        <tr>
+            <td>Hora</td>
+            <td>
+                <input type="time" name="hora" id="" required>
+            </td>
+        </tr>
+        <tr>
+            <td>Semana</td>
+            <td>
+                <input type="week" name="semana" id="" required>
+            </td>
+        </tr>
+
 <tr>
-
-    <td>Nombre:</td>
-
-    <td>
-    <input type="text" name="nombre" id="">
-    </td>
-
+    <td>Mes</td>
+    <td><input type="month" name="Mes" id="" required></td>
 </tr>
+
+
+
+
+
+
+        <tr>
+            <td>Fecha Hora</td>
+            <td>
+                <input type="datetime-local" name="Fechahora" id="" required>
+            </td>
+        </tr>
+        <tr>
+            <td>Fecha Hora (ingresar dato )</td>
+            <td>
+                <input type="datetime" name="fechahoraingresa" id="" required title="Debe ingresar la fecha y la hora , segun el siguiente formato : aaa-mm-dd-hh-mm-ss">
+            </td>
+        </tr>
+
+        <tr>
+            
+            <td>Correo electronico</td>
+            
+            <td><input type="email" name="Correoelectronico" id="" required></td>
+
+        </tr>
+
+<tr>
+    <td>Direccion</td>
+    <td><textarea name="Direccion" id="" required></textarea></td>
+</tr>
+
+
+
+        <tr>
+            <td>Clave Secreta</td>
+            <td><input type="password" name="clavesecreta" id="" required></td>
+        </tr>
+
+
+        <tr>
+    
+            <td>Valor oculto:</td>
+            <td><input type="hidden" name="oculto" value="este valor no es visible"></td>
+
+        </tr>
+
+        <tr>
+            <td>Color</td>
+            <td><input type="color" name="color" id="" required></td>
+        </tr>
+
+        <tr>
+            <td>Rango</td>
+            
+            <td><input type="range" name="rango" id="" required min="0" max="100" value="0" onchange="salida.value=rango.value"> 
+            <output name="salida"></output></td>
+        </tr>
+
+<tr>
+    <td>Sexo</td>
+    <td><input type="radio" name="Sexo" id="" value="F" checked>Femenino
+    <input type="radio" name="Sexo" id="" value="M">Masculino</td>
+</tr>
+
+<tr>
+    <td>Actividad</td>
+    <td>
+        <input type="checkbox" name="Actividad[]" id="" multiple value="Estudia">Estudia
+        <input type="checkbox" name="Actividad[]" id="" multiple value="Trabaja">Trabaja
+        <input type="checkbox" name="Actividad[]" id="" multiple value="Otra">otra</td>
+</tr>
+
+
+ <tr>
+    <td>Archivo:</td>
+    <td><input type="file" name="Archivo" id="" required></td>
+ </tr>
+
+ <tr>
+    <td>Imagen</td>
+    <td><input type="image" src="./uneweb.png" alt="Logo de uneweb"></td>
+ </tr>
+
+
+
+
+
+
+
 
     </table>
     <input type="submit" value="ENVIAR">
+    <input type="reset" value="LIMPIAR">
     </form>
-    
-    
 </body>
 </html>

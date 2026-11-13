@@ -4,18 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="./uneweb.ico" type="image/x-icon">
 </head>
 <body>
     <h1>ejemplo 05 formulario</h1>
-    <form action="./php/formulario.php" method="get">
+    <form action="./php/formulario.php" method="get" enctype="multipart/form-data">
         <table>
             <tr>    
                 <td>nombre</td>
                 <td>
                     <input type="text" name="nombre" id=""> </td>
             </tr>
+            <tr>
+                <td>edad</td>
+                <td>
+                    <input type="number" name="edad" id="" required>
+                </td>
+
+            </tr>   
+            <tr>   
+                <td>estatura</td>
+                <td>
+                    <input type="number"
+                    name="estatura"
+                    id="" min="0" step="0.01" required>
+                </td>
+            </tr>
+            <tr>
+                <td>fecha de nacimiento</td>
+                <td>
+                    <input type="date" name="fechadenaci"
+                    id="" required>
+                </td>
+            </tr>
+            <tr>
+                <td>hora</td>
+                <td>
+                    <input type="time" name="hora" id="" required>
+                </td>
+
+            </tr>
+            <tr>
+                <td>semana</td>
+                <td>
+                    <input type="week" name="semana" id="" required>
+                </td>
+                <tr>
+                    <td>mes</td>
+                    <td>
+                        <input type="month" name="mes" id="" required>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>fecha hora</td>
+                    <td>
+                        <input type="datetime-local" name="fechahora" id="" required>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>fecha hora (ingresar dato)</td>
+                    <td>
+                        <input type="datetime" name="fechahoraingresa" id="" required title="debe ingresar la fecha y la hora segun el siguiente formato aaaa-mm-dd hh:mm:ss">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>correo electronico</td>
+                    <td>
+                        <input type="email" name="correoelectronico" id="" required>
+                    </td>
+               </tr>
+               <tr>
+                <td>direccion</td>
+                <td>
+                    <textarea name="direccion" id="" required></textarea>
+                </td>
+               </tr>
+               <tr>
+                <td>clave secreta</td>
+                <td>
+                    <input type="password" name="clavesecreta" id="" required>
+                </td>
+
+               </tr>
+               <tr>
+                <td>valor oculto</td>
+                <td>
+                    <input type="hidden" name="oculto" value="este valor no es visible">
+                </td>
+
+               </tr>
+               <tr>
+                <td>color</td>
+                <td>
+                    <input type="color" name="color" id="" required>
+                </td>
+
+
+               </tr>
+               <tr>
+                <td>rango</td>
+                <td>
+                    <input type="range"
+                     name="rango"
+                      id="" required min="0"
+                       max="100" value="0" onchange="salida.value=rango.value"><output name="salida">0</output>
+                </td>
+
+               </tr>
+               <tr>
+                <td>sexo</td>
+                <td>
+                    <input type="radio" name="sexo" id="" value="f" checked> femenino
+                    <input type="radio" name="sexo" id="" value="m" checked> masculino
+                </td>
+               </tr>
+               <tr>
+                <td>actividad</td>
+                <td>
+                    <input type="checkbox" name="actividad" id="" multiple value="estudia"> estudia
+                         <input type="checkbox" name="actividad" id="" multiple value="trabaja"> trabaja
+                             <input type="checkbox" name="actividad" id="" multiple value="otra"> otra
+                </td>
+               </tr>
+               <tr>
+                <td>archivo</td>
+                <td>
+                    <input type="file" name="archivo" id="" required>
+                </td>
+               </tr>
+               <tr>
+                <td>imagen</td>
+                <td><input type="image" src="./uneweb.png" id="">
+                    
+                
+                </td>
+
+               </tr>
         </table>
-        <input type="submit" value="enviar"
+        <input type="submit" value="enviar">
+        <input  type="reset" value="LIMPIAR">
     ></form>   
     </body>
 </html>
