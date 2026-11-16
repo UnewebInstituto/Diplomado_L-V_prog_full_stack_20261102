@@ -1,0 +1,127 @@
+/* Todas las etiquetas */
+*{
+    box-sizing: border-box;
+}
+
+
+
+/*
+Propiedades css para celular
+*/
+[class*='col-']{
+    width: 100%;
+}
+/*
+    Lo que se encuentre después de la etiqueta div (contenedor)
+    va a ser inicializado, es decir vuelve a las propiedades css
+    del principio. Sin contenido, como tabla y limpiando el efecto
+    display:block
+*/
+div::after{
+    content:"";
+    clear: both;
+    display: table;
+}
+/*
+    Todas las etiquetas con nombre de clase que contenga "col-"
+    van a flotar hacia la izquierda y un relleno de 15px.
+*/
+[class*='col-']{
+    float:left;
+    padding: 15px;
+}
+/*
+    Estilo de la letra o caligrafía
+*/
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*
+    Propiedades del encabezado de la página
+*/
+header{
+    background-color: bisque;
+    color: black;
+    padding: 15px;
+}
+/*
+    Propiedades de la lista no ordenada (ul) contenida en el menú (nav)
+*/
+nav ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+/*
+    Elementos de lista contenidos en el menú
+*/
+nav li{
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: burlywood;
+    color: black;
+    box-shadow: 0px 2px 3px gray;
+}
+/*
+    Quitar sub rayado de decoración en las anclas
+*/
+nav a{
+    text-decoration: none;
+}
+/*
+    Cuando el mouse pase sobre las opciones del menú 
+    cambie el color
+*/
+nav li:hover{
+    background-color: beige;
+}
+aside{
+    background-color: burlywood;
+    color: black;
+    font-size: 12px;
+    padding: 15px;
+    text-align: justify;
+}
+footer{
+    background-color: bisque;
+    color: black;
+    padding: 15px;
+    text-align: center;
+}
+
+
+/*
+Propiedades css para tablet
+*/
+@media only screen and (min-width: 600px) {
+    .col-s-1{width:8.33%;}
+    .col-s-2{width:16.66%;}
+    .col-s-3{width:25%;}
+    .col-s-4{width:33.33%;}
+    .col-s-5{width:41.66%;}
+    .col-s-6{width:50%;}
+    .col-s-7{width:58.33%;}
+    .col-s-8{width:66.66%;}
+    .col-s-9{width:75%;}
+    .col-s-10{width:83.33%;}
+    .col-s-11{width:91.66%;}
+    .col-s-12{width:100%;}
+}
+
+/*
+Propiedades css para pc o laptop
+*/
+@media only screen and (min-width: 768px) {
+    .col-1{width:8.33%;}
+    .col-2{width:16.66%;}
+    .col-3{width:25%;}
+    .col-4{width:33.33%;}
+    .col-5{width:41.66%;}
+    .col-6{width:50%;}
+    .col-7{width:58.33%;}
+    .col-8{width:66.66%;}
+    .col-9{width:75%;}
+    .col-10{width:83.33%;}
+    .col-11{width:91.66%;}
+    .col-12{width:100%;}
+}

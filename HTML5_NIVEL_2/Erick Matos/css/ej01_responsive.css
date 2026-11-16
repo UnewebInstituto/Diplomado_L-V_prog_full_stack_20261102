@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+}
+/*
+Lo que se encuentre despues de la etiqueta div, contenedor,
+va a ser inicializado, es decir vuelve a las propiedades CSS del principio.
+Sin contenido, como tabla y limpiando el efecto displa:block
+*/
+div::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+/*
+Todas etiquetas con nombre de clase que contengan "col-" van a flotar hacia
+la izquierda y van a tener un relleno de 15px
+*/
+[class*='col-']{
+    float: left;
+    padding: 15px;
+}
+/*
+Estilo de la letra 
+*/
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*
+Encabezado de la Pagina
+*/
+header{
+    background-color: #BDE7F2;
+    color: black;
+    padding: 15px;
+    text-align: center;
+}
+
+/*
+Menu : lista no ordenada (ul) contenida en nav.
+*/
+nav ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+/*
+Menu : elementos de lista.
+*/
+nav li{
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #9ECAE1;
+    color: black;
+    box-shadow: 0px 2px 3px rgb(105, 137, 245);
+}
+/*
+Enlaces
+*/
+nav a{
+    text-decoration: none;
+}
+/*
+Efecto al pasar el mouse por encima
+*/
+nav li:hover{
+    background-color:rgb(105, 137, 245) ;
+
+}
+aside{
+    background-color: #84A4CA;
+    color: black;
+    font-size: 12px;
+    padding: 15px;
+    text-align: justify;
+}
+footer{
+    background-color: #475C86;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/*
+Propiedades CSS para Celular
+*/
+[class*='col-']{
+    width: 100%;
+}
+/*
+Propiedades CSS para Tablet
+*/
+@media only screen and (min-width:600px) {
+    .col-s-1{width: 8.33%;}
+    .col-s-2{width: 16.66%;}
+    .col-s-3{width: 25%;}
+    .col-s-4{width: 33.33%;}
+    .col-s-5{width: 41.66%;}
+    .col-s-6{width: 50%;}
+    .col-s-7{width: 58.33%;}
+    .col-s-8{width: 66.66%;}
+    .col-s-9{width: 75%;}
+    .col-s-10{width: 83.33%;}
+    .col-s-11{width: 91.66%;}
+    .col-s-12{width: 100%;}
+}
+/*
+Propiedades CSS para PC o LAPTOP
+*/
+@media only screen and (min-width:768px) {
+    .col-1{width: 8.33%;}
+    .col-2{width: 16.66%;}
+    .col-3{width: 25%;}
+    .col-4{width: 33.33%;}
+    .col-5{width: 41.66%;}
+    .col-6{width: 50%;}
+    .col-7{width: 58.33%;}
+    .col-8{width: 66.66%;}
+    .col-9{width: 75%;}
+    .col-10{width: 83.33%;}
+    .col-11{width: 91.66%;}
+    .col-12{width: 100%;}
+}
