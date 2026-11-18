@@ -1,0 +1,98 @@
+ #iii_p{
+            text-align: justify;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: aquamarine;
+            border-style: solid;
+            border-width: 1px;
+            border-color: azure;
+            width: 70%;
+            margin-left: 15%;
+        }
+    [id^="mi"]{ 
+    text-align: right;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: chocolate;
+    border-style: double;
+    border-width: 2px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+    [id$="mi"]{ 
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: pink;
+    border-style: dotted;
+    border-width: 3px;
+   
+}
+
+[id*="mi"]{
+      width: 60%;
+    margin-left: 20%;
+}
+
+.solitario{
+    background-color: grey;
+    padding: 20px;
+}
+
+p{
+    font-style: italic;
+}
+
+.etiqueta{
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 60%;
+    margin-left: 20%;
+    border-color: whitesmoke;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 3PX 3PX 3PX;
+    -o-box-shadow: 3px 3px 3px black; /* Opera */
+    -ms-box-shadow: 3px 3px 3px black; /* Edge */
+    -moz-box-shadow: 3px 3px 3px black; /* Mozilla Firefox*/
+    -webkit-box-shadow: 3px 3px 3px black; /* Safari */
+    background:linear-gradient(left, yellow 0%, orange 50%, rebeccapurple 100%´);
+    background:-o-linear-gradient(left, yellow 0%, orange 50%, rebeccapurple 100%);
+    background:-moz-linear-gradient(left, yellow 0%, orange 50%, rebeccapurple 100%);
+    background:-ms-linear-gradient(left, yellow 0%, orange 50%, rebeccapurple 100%);
+    background:-webkit-linear-gradient(left, yellow 0%, orange 50%, rebeccapurple 100%);
+    border-radius:  10px; 
+
+}
+
+.texto{
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 40%;
+    margin-left: 30%;
+    font-size: xx-large;
+    text-shadow: 3px 0px 3px blue;
+}
+
+@font-face {
+
+    font-family: "practica";
+    src: url(AgravePro-VariableFont_wght.ttf);
+}
+
+.texto{
+    text-align: center;
+    padding: 20px;
+    font-family: practica;
+    width: 40%;
+    margin-left: 30%;
+    font-size: xx-large;
+    text-shadow: 3px 0px 3px blue;
+
+}
+
+.texto:hover{
+
+    text-shadow: 3px 0px 3px red;
+    transform: skew(45deg)
+}

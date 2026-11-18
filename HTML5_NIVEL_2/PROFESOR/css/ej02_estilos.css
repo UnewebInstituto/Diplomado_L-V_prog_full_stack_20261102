@@ -1,0 +1,119 @@
+/* Accediendo a las propiedad a través del nombre de id */
+#iii_p{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:chocolate;
+    border-style: solid;
+    border-width: 1px; 
+    border-color: gray;
+    width: 70%; 
+    margin-left: 15%;
+}
+/* Todos los selectores que comienzan con el prefijo "mi"*/
+[id^="mi"]{
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: steelblue;
+    border-style: double;
+    border-width: 2px;
+}
+/* Todos los selectores que terminan con el sufijo "mi"*/
+[id$="mi"]{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: slateblue;
+    border-style: dotted;
+    border-width: 3px;
+}
+/* Todos los selectores que contengan la silava "mi"*/
+[id*="mi"]{
+    width: 60%;
+    margin-left: 20%;
+}
+
+/* Accediendo a través del nombre de clase */
+.solitario{
+    background-color: #CCC;
+    padding: 20px;
+}
+
+/* Accediendo a través del nombre de la etiqueta */
+p{
+    font-style: italic;
+}
+
+.etiqueta{
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 40%;
+    margin-left: 30%;
+    border-color: gray;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 3px 3px 3px black;    /* Cualquier navagador */
+    -o-box-shadow: 3px 3px 3px black; /* Opera */
+    -ms-box-shadow: 3px 3px 3px black; /* Edge */
+    -moz-box-shadow: 3px 3px 3px black; /* Mozilla Firefox*/
+    -webkit-box-shadow: 3px 3px 3px black; /* Safari */
+    /* background: cadetblue; */
+    background: linear-gradient(left, yellow 0%, orange 50%, red 100%);
+    background: -o-linear-gradient(left, yellow 0%, orange 50%, red 100%);
+    background: -ms-linear-gradient(left, yellow 0%, orange 50%, red 100%);
+    background: -moz-linear-gradient(left, yellow 0%, orange 50%, red 100%);
+    background: -webkit-linear-gradient(left, yellow 0%, orange 50%, red 100%);
+    /*
+    cada esquina tendría un efecto de redondeo distinto
+    border-radius: 2px 4px 8px 10px;
+    */
+    border-radius: 10px; /* Todas las esquinas con el mismo efecto de redondeo*/
+}
+/*
+    En algunos navegadores, la colocación de sus propiedades
+    csss, requieren de un prefijo, que se refiera al nombre
+    del navegador:
+    -moz-propiedad     MOZILLA
+    -o-propiedad       OPERA
+    -ms-propiedad      EDGE 
+    -webkit-propiedad  SAFARI
+    
+    Para tener visibilidad del caso 
+    https://htmlcheatsheet.com/
+
+*/
+/*
+    Incorporación de nueva fuente: 
+    1-) Descargar archivo de fuentes del origen seleccionado. Por ejemplo:
+    https://fonts.google.com/selection?preview.script=Latn
+    2-) El archivo descargado, tiene formato comprimido. Una vez descomprimido
+    el conjunto de archivos, deben reubicarse en la carpeta donde se encuentre
+    el archivo css de la declaración de la nueva fuente.
+    3-) A través de la función @font-face{}, declarar nombre de la fuente y 
+    localización de origen.
+    4-) Declarar el nombre de fuente definido a la etiqueta, sobre la que 
+    se quiere lograr el efecto.
+*/
+
+@font-face {
+    font-family: "practica";
+    src: url("AgravePro-VariableFont_wght.ttf");
+}
+
+.texto{
+    text-align: center;
+    padding: 20px;
+    font-family: practica;
+    width: 80%;
+    margin-left: 10%;
+    font-size: xx-large;
+    text-shadow: 3px 0px 3px blue;
+}
+
+.texto:hover{
+    text-shadow: 3px 0px 3px red;
+    /*
+    transform: rotate(-45deg);
+    */
+    transform: skew(-45deg);
+}
+

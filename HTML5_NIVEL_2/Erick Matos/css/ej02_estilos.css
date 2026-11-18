@@ -1,0 +1,94 @@
+#iii_p{
+        text-align: justify; 
+        font-family: Arial, Helvetica, sans-serif; 
+        background-color: rgb(182, 151, 238); 
+        border-style: solid; 
+        border-width: 1px; 
+        border-color: rgb(108, 16, 194); 
+        width: 70%; 
+        margin-left: 15%;
+    }
+[id^="mi"]{
+    text-align: right;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(235, 133, 226);
+    border-style: double;
+    border-width: 2px;
+    width: 50%;
+    margin-left: 25%;
+    }
+[id$="mi"]{
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(133, 235, 230);
+    border-style:dotted;
+    border-width: 3px;
+    width: 50%;
+    margin-left: 25%;
+    }
+[id*="mi"]{
+    width: 60%;
+    margin-left: 20%;
+}
+/*Accediendo a través del nombre de clase*/
+.solitario{
+    background-color: rgb(255, 193, 118);
+    padding: 20px;
+}
+/*Accediendo a través del nombre de la etiqueta*/
+p{
+    font-style: italic;
+}
+.etiqueta{
+    text-align: center;
+    padding: 20px;
+    font-family: bogle;
+    width: 40%;
+    margin-left: 30%;
+    background: linear-gradient(left,green 0%, cyan 50%, red 100%);
+    background: -o-linear-gradient(left,green 0%, cyan 50%, red 100%);
+    background: -ms-linear-gradient(left,green 0%, cyan 50%, red 100%);
+    background: -moz-linear-gradient(left,green 0%, cyan 50%, red 100%);
+    background: -webkit-linear-gradient(left,green 0%, cyan 50%, red 100%);
+    border-color: gray;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    -o-box-shadow: 3px 3px 3px black;
+    -ms-box-shadow: 3px 3px 3px black;
+    -moz-box-shadow: 3px 3px 3px black;
+    -webkit-box-shadow: 3px 3px 3px black;
+}
+/*
+    En algunos navegadores, la colocación de sus propiedades
+    csss, requieren de un prefijo, que se refiera al nombre
+    del navegador:
+    -moz-propiedad     MOZILLA
+    -o-propiedad       OPERA
+    -ms-propiedad      EDGE 
+    -webkit-propiedad  SAFARI
+
+    Para tener visibilidad del caso
+    https://htmlcheatsheet.com/
+
+*/
+
+@font-face {
+    font-family:"bogle";
+    src: url("./BBHBogle-Regular.ttf");
+}  
+.texto{
+    text-align: center;
+    padding: 20px;
+    font-family: bogle;
+    width: 80%;
+    margin-left: 10%;
+    font-size: xx-large;
+    text-shadow: 2px 2px 2px rgb(255, 153, 0);
+}
+.texto:hover{
+    text-shadow: 2px 2px 2px rgb(0, 255, 55);
+    /*transform: rotate(45deg);*/
+    transform: skew(30deg, 20deg);
+}
+   
