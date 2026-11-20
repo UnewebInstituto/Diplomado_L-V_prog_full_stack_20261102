@@ -86,9 +86,8 @@
             text-shadow: 3px 0px 3px violet;
 
         }
-        .texto:hover{
+        .texto:hover{ 
             transform: skew(-45deg);
             text-shadow: 3px 0px 3px blue;
-            /*transform: rotate(-45deg);/*
         }
-       
+            
