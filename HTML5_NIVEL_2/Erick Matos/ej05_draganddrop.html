@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/ej05_draganddrop.css">
+    <title>Drag and Drop</title>
+</head>
+<body>
+       <h1>API Drag and Drop</h1>
+    <a href="https://www.w3schools.com/html/html5_draganddrop.asp" target="_blank">Documentación www.w3chools.com</a>
+    <hr>
+    <a href="\">Regresar</a>
+    <hr>
+    <div id="caja1"
+        ondrop="dropHandler(event)" 
+        ondragover="dragoverHandler(event)">
+        <img id="dibujo" 
+            alt="Imagen que se puede reubicar" 
+            src="../img/1.jpg"
+            draggable="true" 
+            ondragstart="dragstartHandler(event)" >
+    </div>
+    <!--El atributo draggable="true", permite mover la imagen
+        ondragstart="funcion(event), qué hacer cuando inicia el arrastrado
+        del contenido"
+        ondrop="funcion(event), qué hacer cuando se suelta el contenido"-->
+    <div id="caja2" 
+        ondrop="dropHandler(event)" 
+        ondragover="dragoverHandler(event)">
+    </div>
+    <script src="./js/ej05_draganddrop.js"></script>
+</body>
+</html>
