@@ -1,0 +1,39 @@
+En la captura se muestra Windows 10 con el botón **Cambiar** atenuado y el aviso **«* Un administrador controla algunos valores de configuración. La ubicación para este dispositivo está desactivada»** debajo de **Permitir el acceso a la ubicación en este dispositivo**. Eso ocurre cuando una directiva de grupo, el registro del sistema o la administración del dispositivo bloquean el cambio desde la interfaz gráfica.
+
+### 1. Quitar el bloqueo desde Directivas de grupo (Windows Pro / Enterprise / Education)
+
+1. Presiona `Win + R`, escribe `gpedit.msc` y pulsa **Intro**.
+2. Navega a **Configuración del equipo** > **Plantillas administrativas** > **Componentes de Windows** > **Ubicación y sensores**.
+3. Haz doble clic en **Desactivar ubicación**, selecciona **No configurada** (o **Deshabilitada**) y haz clic en **Aceptar**.
+4. Abre **PowerShell** o **Símbolo del sistema** como administrador y ejecuta `gpupdate /force`.
+
+* *Verificación:* Cierra y vuelve a abrir **Configuración > Privacidad > Ubicación**; el mensaje del administrador ya no debería aparecer y el botón **Cambiar** quedará habilitado.
+
+
+
+### 2. Corregir el bloqueo en el Registro o iniciar el servicio (Windows Home o si persiste el bloqueo)
+
+1. Haz clic derecho en **Inicio** y abre **Windows PowerShell (Administrador)** o **Símbolo del sistema (Administrador)**.
+2. Ejecuta los siguientes comandos para limpiar restricciones de política de ubicación, permitir el acceso en el consentimiento del sistema y asegurarte de que el servicio de geolocalización esté activo:
+```powershell
+Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors" -Name "DisableLocation" -ErrorAction SilentlyContinue
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location" -Name "Value" -Value "Allow"
+Start-Service -Name "lfsvc" -ErrorAction SilentlyContinue
+
+```
+
+
+3. Si el botón **Cambiar** sigue deshabilitado, revisa también la clave `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Sensor\Overrides` o reinicia el equipo.
+
+* *Verificación:* Ejecuta `Get-Service lfsvc` en PowerShell para confirmar que el estado sea `Running`, y revisa en **Configuración > Privacidad > Ubicación** que el botón **Cambiar** ahora responda.
+
+
+
+### 3. Activar la ubicación desde Configuración
+
+1. Con el botón **Cambiar** ya habilitado en **Configuración > Privacidad > Ubicación**, haz clic en **Cambiar** y pon el interruptor en **Activado**.
+
+
+2. Más abajo, en **Permitir que las aplicaciones accedan a tu ubicación**, activa el interruptor correspondiente a tu usuario.
+
+* *Verificación:* Debajo de **Permitir el acceso a la ubicación en este dispositivo** debe indicarse que la ubicación está activada y no debe mostrarse el aviso de bloqueo de administrador.
